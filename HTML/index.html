@@ -24,7 +24,7 @@
           <li><a href="#ablauf">Ablauf</a></li>
           <li><a href="#essen">Essensplan</a></li>
           <li><a href="#location">Location</a></li>
-          <li><a href="">An/Abmeldung</a></li>
+          <li><a href="#anmeldung">An/Abmeldung</a></li>
         </ul>
       </nav>
       <div id="login">
@@ -136,7 +136,7 @@
           <li>Tonanlage/Mikrofon</li>
         </ul>
       </div>
-      <h2>An-/Abmeldung</h2>
+      <h2 id="anmeldung">An-/Abmeldung</h2>
       <form action="" method="get">
         <fieldset>
           <h3>Anwesenheit</h3>
@@ -217,14 +217,14 @@
           <input type="checkbox" name="kindermenue3" id="kindermenue3" />
           <label for="kindermenue3">Kinderportion</label><br />
           <input type="checkbox" name="p3_alkohol" id="p3_alkohol" />
-          <label for="p3_alkohol">Ich trinke Alkohol</label>
+          <label for="p3_alkohol">Ich trinke Alkohol</label><br /><br />
+          <input type="hidden" name="user" value="username" />
+          <input type="hidden" name="hasAnswered" value="true" />
+          <input type="submit" value="Absenden" /><input
+            type="reset"
+            value="reset"
+          />
         </fieldset>
-        <input type="hidden" name="user" value="username" />
-        <input type="hidden" name="hasAnswered" value="true" />
-        <input type="submit" value="Absenden" /><input
-          type="reset"
-          value="reset"
-        />
       </form>
     </main>
     <footer>
