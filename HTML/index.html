@@ -22,10 +22,27 @@
       <nav>
         <ul>
           <li><a href="#ablauf">Ablauf</a></li>
-          <li><a href="">Location</a></li>
+          <li><a href="#essen">Essensplan</a></li>
+          <li><a href="#location">Location</a></li>
           <li><a href="">An/Abmeldung</a></li>
         </ul>
       </nav>
+      <div id="login">
+        <form action="" method="get">
+          <label for="user">Benutzer:</label>
+          <input
+            type="text"
+            name="bn_name"
+            id="user"
+            placeholder="username"
+            autofocus
+          /><br />
+          <label for="pw">Passwort:</label>
+          <input type="password" name="pw" id="pw" placeholder="*****" /><br />
+
+          <input type="submit" value="login" />
+        </form>
+      </div>
       <div id="hero">
         <img
           src="resources/images/samantha-gades-x40Q9jrEVT0-unsplash.jpg"
@@ -34,10 +51,12 @@
           width="100%"
           height="auto"
         />
-        <h1 id="ablauf">Ablauf</h1>
+        <h1>Hochzeit von Thomas & Alex</h1>
+        <time datetime="2024-08-25">25.08.2024</time>
       </div>
     </header>
     <main>
+      <h2 id="ablauf">Ablaufplan</h2>
       <ul>
         <li>12:00 - 14:00</li>
         <p>Sektempfang & Trauung</p>
@@ -50,6 +69,163 @@
         <li>20:00-00:00</li>
         <p>Party</p>
       </ul>
+      <h2 id="essen">Essensplan*</h2>
+      <table border="1">
+        <thead>
+          <th></th>
+          <th>Vegan</th>
+          <th>Menü 1 - Fisch</th>
+          <th>Menü 2 - Fleisch</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Vorspeise</b></td>
+            <td>Mangosalat</td>
+            <td>gemischter Salat mit Tunfisch</td>
+            <td>gemischter Salat mit gebratenen <br />Hähnchenstreifen</td>
+          </tr>
+          <tr>
+            <td><b>Hauptspeise</b></td>
+            <td>
+              Kumpir gefüllt mit roten Linsen,<br />
+              Aubergine und Brockoli
+            </td>
+            <td>gebratenes Lachsfilet mit<br />Dillcreme an Bandnudeln</td>
+            <td>
+              Rinderfilet mit Spargel<br />
+              und Rosmarinkartoffeln
+            </td>
+          </tr>
+          <tr>
+            <td><b>Nachspeise</b></td>
+            <td>veganes Tiramisu</td>
+            <td colspan="2">Mousse au Chocolat</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <em
+          >*Alle Gerichte sind auch als <b>Kinderportion</b> erhaltbar. Bitte
+          gib dies bei der <u>Anmeldung</u> an.</em
+        >
+      </p>
+      <h2 id="location">Location</h2>
+      <div id="adress">
+        <h3>Adresse</h3>
+        <a href="http://https://www.schlosszehdenick.de/"
+          ><b>Havelschloss Zehdenick</b></a
+        ><br />
+        Schleusenstraße 15b<br />
+        16792 Zehdenick<br />
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2402.005082786042!2d13.328401788854988!3d52.9843101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHavelschloss%20Zehdenick%20Schleusenstra%C3%9Fe%2015b%2016792%20Zehdenick!5e0!3m2!1sde!2sde!4v1723623726167!5m2!1sde!2sde"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div id="merkmale">
+        <h3>Merkmale</h3>
+        <ul>
+          <li>Außenbereich</li>
+          <li>Parkplätze vorhanden</li>
+          <li>Leinwand/Beamer</li>
+          <li>Tonanlage/Mikrofon</li>
+        </ul>
+      </div>
+      <h2>An-/Abmeldung</h2>
+      <form action="" method="get">
+        <fieldset>
+          <h3>Anwesenheit</h3>
+          <label for="anwesenheit">Anwesenheit:</label>
+          <select name="anwesenheit" id="anwesenheit">
+            <option value="true">Ich komme</option>
+            <option value="false">Ich komme nicht</option></select
+          ><br />
+          <label for="personen">Anzal Personen:</label>
+          <input type="number" name="personen" id="personen" min="0" max="3" />
+          <br />
+          <label for="p1">Name Person 1:</label>
+          <input type="text" name="name_p1" id="p1" /><br />
+          <label for="p2">Name Person 2:</label>
+          <input type="text" name="name_p2" id="p2" /><br />
+          <label for="p3">Name Person 3:</label>
+          <input type="text" name="name_p3" id="p3" /><br />
+          <p>
+            Kinder zählen als eigenständige Person. Wir bitten euch allerdings
+            nach Möglichkeit keine Kinder zur Hochzeit mitzubringen
+          </p>
+        </fieldset>
+        <fieldset>
+          <h3>Essen & Trinken</h3>
+
+          <label for="p1_menu"><b>Person 1</b></label
+          ><br />
+          <input type="radio" name="p1_menu" id="false" value="false" />
+          <label for="vegan">-</label>
+          <br />
+          <input type="radio" name="p1_menu" id="vegan" value="vegan" />
+          <label for="vegan">Vegan</label>
+          <br />
+          <input type="radio" name="p1_menu" id="fisch" value="fisch" />
+          <label for="fisch">Fisch</label>
+          <br />
+          <input type="radio" name="p1_menu" id="fleisch" value="fleisch" />
+          <label for="fleisch">Fleisch</label>
+          <br />
+          <input type="checkbox" name="kindermenue" id="kindermenue" />
+          <label for="kindermenue2">Kinderportion</label><br />
+          <input type="checkbox" name="p1_alkohol" id="p1_alkohol" />
+          <label for="p1_alkohol">Ich trinke Alkohol</label><br /><br />
+
+          <label for="p2_menu"><b>Person 2</b></label
+          ><br />
+          <input type="radio" name="p2_menu" id="false" value="false" />
+          <label for="vegan">-</label>
+          <br />
+          <input type="radio" name="p2_menu" id="vegan" value="vegan" />
+          <label for="vegan">Vegan</label>
+          <br />
+          <input type="radio" name="p2_menu" id="fisch" value="fisch" />
+          <label for="fisch">Fisch</label>
+          <br />
+          <input type="radio" name="p2_menu" id="fleisch" value="fleisch" />
+          <label for="fleisch">Fleisch</label>
+          <br />
+          <input type="checkbox" name="kindermenue2" id="kindermenue2" />
+          <label for="kindermenue">Kinderportion</label><br />
+          <input type="checkbox" name="p2_alkohol" id="p2_alkohol" />
+          <label for="p2_alkohol">Ich trinke Alkohol</label><br /><br />
+
+          <label for="p3_menu"><b>Person 3</b></label
+          ><br />
+          <input type="radio" name="p3_menu" id="false" value="false" />
+          <label for="vegan">-</label>
+          <br />
+          <input type="radio" name="p3_menu" id="vegan" value="vegan" />
+          <label for="vegan">Vegan</label>
+          <br />
+          <input type="radio" name="p3_menu" id="fisch" value="fisch" />
+          <label for="fisch">Fisch</label>
+          <br />
+          <input type="radio" name="p3_menu" id="fleisch" value="fleisch" />
+          <label for="fleisch">Fleisch</label>
+          <br />
+          <input type="checkbox" name="kindermenue3" id="kindermenue3" />
+          <label for="kindermenue3">Kinderportion</label><br />
+          <input type="checkbox" name="p3_alkohol" id="p3_alkohol" />
+          <label for="p3_alkohol">Ich trinke Alkohol</label>
+        </fieldset>
+        <input type="hidden" name="user" value="username" />
+        <input type="hidden" name="hasAnswered" value="true" />
+        <input type="submit" value="Absenden" /><input
+          type="reset"
+          value="reset"
+        />
+      </form>
     </main>
     <footer>
       <ul>
