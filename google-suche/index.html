@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Suche</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #suchfeld {
+        margin: 20px;
+      }
+
+      #suchfeld input {
+        width: 80vw;
+        line-height: 26px;
+        padding: 5px 15px;
+        border: 1px solid grey;
+        border-radius: 25px;
+      }
+      input[type="submit"] {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Google</h1>
+    <form action="suchen.php" method="GET" autocomplete="off">
+      <div id="suchfeld">
+        <input type="text" name="query" id="query" />
+      </div>
+      <input type="submit" value="suchen" name="search" />
+      <input type="submit" value="Auf gut Glück" name="agg" />
+    </form>
+  </body>
+</html>
