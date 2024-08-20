@@ -108,6 +108,7 @@ article {
 
 div.img-container {
   position: relative;
+  height: 300px;
 }
 
 img.img.preview {
