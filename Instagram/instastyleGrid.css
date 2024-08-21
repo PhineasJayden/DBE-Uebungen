@@ -1,0 +1,139 @@
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/poppins-v21-latin-300.woff2") format("woff2");
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/poppins-v21-latin-regular.woff2") format("woff2");
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/poppins-v21-latin-500.woff2") format("woff2");
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  border-bottom: 1px solid rgb(203, 201, 201);
+  padding: 0px 30px;
+}
+
+header .btn-container {
+  float: right;
+  padding: 10px 0px;
+}
+
+.btn {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(24, 24, 24);
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.btn.login {
+  background-color: #4cb5f9;
+  color: #f4fafe;
+}
+
+.btn.login:hover {
+  background-color: #2aa1ef;
+}
+
+.btn.register {
+  background-color: transparent;
+  color: #4cb5f9;
+  font-weight: 500;
+}
+
+.btn.register:hover {
+  background-color: #f3faff;
+}
+
+header .logo {
+  width: 100px;
+  position: sticky;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  grid-column: 1/4;
+}
+
+h2 {
+  font-size: 0.9em;
+  grid-column: 2/3;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  grid-column: 2/3;
+}
+
+ul li {
+  padding-bottom: 0px;
+}
+
+ul.btn-container.explore {
+  grid-row: 2;
+  grid-column: 2 /3;
+  margin-top: 0;
+}
+
+ul.btn-container.explore li {
+  display: inline-block;
+}
+
+ul.img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+div.img-container {
+  position: relative;
+  height: auto;
+}
+
+img.img.preview {
+  width: 100%;
+  aspect-ratio: 0.5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+p.img-category {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: 500;
+  text-shadow: 0px 0px 10px #000000;
+  color: #f4fafe;
+  margin: 0px;
+  font-size: 0.8em;
+}
