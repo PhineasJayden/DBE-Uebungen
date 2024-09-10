@@ -1,0 +1,119 @@
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../resources/fonts/poppins-v21-latin-300.woff2') format('woff2');
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/poppins-v21-latin-regular.woff2') format('woff2');
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../resources/fonts/poppins-v21-latin-500.woff2') format('woff2');
+}
+
+@main-color:rgb (246 246 246);
+@secondary-color: rgb(54 111 121);
+@main-color-transp: rgba(246, 246, 246, 0.54);
+@secondary-color-transp: rgba(54, 111, 121, 0.321);
+
+@box-shadow: 0px 0px 20px -5px #000000;
+
+@text-shadow-light: 0px 0px 10px rgb(255, 255, 255);
+@text-shadow-dark: 2px 2px 7px rgba(0, 0, 0, 0.74);
+
+* {
+  font-family: 'Poppins', sans serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-color: @main-color-transp;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: @box-shadow;
+
+  &* {
+    color: @secondary-color;
+  }
+}
+
+img {
+  #logo {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+  }
+  .hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    align-items: space-between;
+    font-size: 1.4em;
+  }
+  li {
+    flex: 1;
+  }
+  a {
+    &:link {
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      text-shadow: @text-shadow-light;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#hero {
+  position: relative;
+  z-index: -1;
+}
+
+.headline {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  padding-right: 20px;
+  color: @main-color;
+  background-color: @secondary-color-transp;
+  text-align: right;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  text-shadow: @text-shadow-dark;
+}
