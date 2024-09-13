@@ -21,9 +21,8 @@
       sizes="16x16"
       href="resources/images/favicon/favicon-16x16.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
-    <script src="less.js" type="text/javascript"></script>
     <title>Stark Hochzeit</title>
   </head>
   <body>
@@ -185,16 +184,16 @@
 
           <label for="p1_menu"><b>Person 1</b></label
           ><br />
-          <input type="radio" name="p1_menu" id="false" value="false" />
+          <input type="radio" name="p1_menu" value="false" />
           <label for="vegan">-</label>
           <br />
           <input type="radio" name="p1_menu" id="vegan" value="vegan" />
           <label for="vegan">Vegan</label>
           <br />
-          <input type="radio" name="p1_menu" id="fisch" value="fisch" />
+          <input type="radio" name="p1_menu" value="fisch" />
           <label for="fisch">Fisch</label>
           <br />
-          <input type="radio" name="p1_menu" id="fleisch" value="fleisch" />
+          <input type="radio" name="p1_menu" value="fleisch" />
           <label for="fleisch">Fleisch</label>
           <br />
           <input type="checkbox" name="kindermenue" id="kindermenue" />
@@ -207,13 +206,13 @@
           <input type="radio" name="p2_menu" id="false" value="false" />
           <label for="vegan">-</label>
           <br />
-          <input type="radio" name="p2_menu" id="vegan" value="vegan" />
+          <input type="radio" name="p2_menu" value="vegan" />
           <label for="vegan">Vegan</label>
           <br />
-          <input type="radio" name="p2_menu" id="fisch" value="fisch" />
+          <input type="radio" name="p2_menu" value="fisch" />
           <label for="fisch">Fisch</label>
           <br />
-          <input type="radio" name="p2_menu" id="fleisch" value="fleisch" />
+          <input type="radio" name="p2_menu" value="fleisch" />
           <label for="fleisch">Fleisch</label>
           <br />
           <input type="checkbox" name="kindermenue2" id="kindermenue2" />
@@ -223,16 +222,16 @@
 
           <label for="p3_menu"><b>Person 3</b></label
           ><br />
-          <input type="radio" name="p3_menu" id="false" value="false" />
+          <input type="radio" name="p3_menu" value="false" />
           <label for="vegan">-</label>
           <br />
-          <input type="radio" name="p3_menu" id="vegan" value="vegan" />
+          <input type="radio" name="p3_menu" value="vegan" />
           <label for="vegan">Vegan</label>
           <br />
-          <input type="radio" name="p3_menu" id="fisch" value="fisch" />
+          <input type="radio" name="p3_menu" value="fisch" />
           <label for="fisch">Fisch</label>
           <br />
-          <input type="radio" name="p3_menu" id="fleisch" value="fleisch" />
+          <input type="radio" name="p3_menu" value="fleisch" />
           <label for="fleisch">Fleisch</label>
           <br />
           <input type="checkbox" name="kindermenue3" id="kindermenue3" />
@@ -254,5 +253,16 @@
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </footer>
+    <script>
+      const header = document.querySelector('header');
+
+      document.addEventListener('scroll', function () {
+        if (window.pageYOffset >= 10) {
+          header.className = 'solid';
+        } else {
+          header.className = '';
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grußnachricht</title>
+  </head>
+  <body>
+    <div id="greeting"></div>
+
+    <script>
+      const greetingDiv = document.getElementById('greeting');
+      const hour = new Date().getHours();
+      const greeting = ['Morgen', 'Tag', 'Abend'];
+      console.log(hour);
+      let p;
+      if (hour <= 11) {
+        p = greeting[0];
+      } else if (hour >= 17) {
+        p = greetings[2];
+      } else {
+        p = greetings[1];
+      }
+      greetingDiv.innerHTML = `<b>Guten</b> ${p}`;
+    </script>
+  </body>
+</html>

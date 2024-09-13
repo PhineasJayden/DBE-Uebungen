@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Übung Ajax</title>
+  </head>
+  <body>
+    <h1>Überschrift</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minus
+      labore modi quia omnis distinctio ut blanditiis enim qui, sequi quos amet
+      dolore, quae similique, quibusdam expedita. Quod, nulla hic.
+    </p>
+    <div id="textinc"></div>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://storage01.dbe.academy/fswd/ajax.json');
+      xhr.onload = function (e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const object = JSON.parse(xhr.response);
+            console.log(object);
+            document.getElementById('textinc').innerHTML = object.name;
+          } else {
+            console.error(xhr.statusText);
+          }
+        }
+      };
+      xhr.onerror = function (e) {
+        console.error(xhr.statusText);
+      };
+      xhr.send(null);
+    </script>
+  </body>
+</html>
